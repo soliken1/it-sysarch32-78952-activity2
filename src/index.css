@@ -5,7 +5,7 @@
 }
 
 header {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 100%;
   height: 10vh;
@@ -24,7 +24,7 @@ header ul {
 header ul li a {
   display: block;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   padding: 10px 25px;
   transition: 0.2s;
   margin: 0 5px;
@@ -35,12 +35,17 @@ header ul li a {
   user-select: none;
 }
 
+.nav-bar {
+  margin-right: 150px;
+}
+
 footer {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 10vh;
-  padding-left: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: #000522;
   display: flex;
   align-items: center;
@@ -48,17 +53,21 @@ footer {
 }
 
 .body {
-  height: 100vh;
-  padding: 100px 0 100px 100px;
+  height: 150vh;
+  padding: 150px 0 100px 100px;
   background-color: #020f59;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 100px;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-y: hidden;
 }
 
 .name {
   color: white;
-  margin-left: 50px;
+  margin-left: 150px;
   font-family: "Kanit", sans-serif;
 }
 
@@ -68,23 +77,38 @@ footer {
 }
 
 .card {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  height: 30vh;
-  width: 200px;
+  height: 50vh;
+  width: 50vh;
   color: white;
-  padding: 10px;
   background-color: #101f78;
   border-radius: 20px;
+  padding: 20px;
   font-family: "Kanit", sans-serif;
-  gap: 10px;
-  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.9));
+  -webkit-box-shadow: 1px 0px 37px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 0px 37px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 0px 37px 4px rgba(0, 0, 0, 0.5);
+}
 
+.cardtext-primary {
+  font-size: 30px;
 }
 
 .image {
+  transform: translate(50%, 0%);
   width: 50%;
-  border-radius: 55px;
-  background-color: aqua;
+  border-radius: 100px;
+}
+
+/*Utilities*/
+
+.textalign-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
 }

@@ -1,10 +1,10 @@
-import Card from './Card.jsx'
+import Card from "./Card.jsx";
 function Body() {
-    return(
-        <div class="body">
-            <Card/>
-        </div>
-    );
+  return (
+    <div className="body">
+      <Card />
+    </div>
+  );
 }
 
-export default Body
+export default Body;

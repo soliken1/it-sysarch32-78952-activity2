@@ -1,37 +1,25 @@
-import profilePic from './assets/155744710.jpg'
-import List from './List.jsx'
+// Card.jsx
+import React from "react";
+import List from "./List";
 
 function Card() {
-    return(
-        <>
+  const students = List();
+
+  return (
+    <>
+      {students.map((student) => (
         <div className="card">
-            <img className="image" src={profilePic}></img>
-            <p>Soliken</p>
-            <p>soliken@gmail.com</p>
+          <div key={student.id}>
+            <img className="image" src={student.profile} alt={student.name} />
+            <p className="textalign-center cardtext-primary mt-2">
+              {student.name}
+            </p>
+            <p className="textalign-center">{student.email}</p>
+          </div>
         </div>
-        <div className="card">
-            <img className="image" src={profilePic}></img>
-            <p>LetMeCook</p>
-            <p>letmecook@gmail.com</p>
-        </div>
-        <div className="card">
-            <img className="image" src={profilePic}></img>
-            <p>ajwnl</p>
-            <p>ajwnl@gmail.com</p>
-        </div>
-        <div className="card">
-            <img className="image" src={profilePic}></img>
-            <p>western union</p>
-            <p>westernunion@gmail.com</p>
-        </div>
-        <div className="card">
-            <img className="image" src={profilePic}></img>
-            <p>ash</p>
-            <p>ash@gmail.com</p>
-        </div>
-        </>
-    ); 
+      ))}
+    </>
+  );
 }
 
-export default Card 
-
+export default Card;
